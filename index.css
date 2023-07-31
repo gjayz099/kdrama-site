@@ -1,0 +1,1288 @@
+/* ================== Google Font ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700;1,900&display=swap');
+/* ============== Default Font ========= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,400;1,500;1,600;1,800&display=swap');
+/* ============ Google Font Title and cast============ */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400;1,500;1,600&display=swap');
+/* ============== Google Font Blog Text ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600&display=swap');
+/* ================= Google Font Name Gallery============================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,400&display=swap');
+/* ==================Root Defualt==================== */
+:root{
+        --ColorWhite: #ffffff;
+        --ColorBlack: #000000;
+        --ColorPrimary: #ff168a;
+        --ColorSecondary: #9700fcfd;
+}
+/* ================Defualt================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+}
+html{
+    font-family: 'Poppins', sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+/* ========================Navbar========================= */
+nav{
+    position: fixed;
+    display: flex;
+    padding: 0rem 5rem;
+    transition: .9s all;
+    justify-content: space-between;
+    min-width: 100%;
+    margin-top: 2rem;
+    align-items: center;
+    z-index: 99;
+}
+/* =======================LOGO======================== */
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+.logo a{
+    color: var(--ColorPrimary);
+}
+.logo a span{
+    color: var(--ColorSecondary);
+}
+.nav-links {
+    list-style: none;
+    overflow: hidden;
+    color: var(--ColorBlack);
+    text-align: center;
+    transition: .9s all;
+    padding-top: .8rem;
+}
+
+.nav-links  li{
+    display: inline;
+    text-transform: uppercase;
+}
+.nav-links li a{
+    color: var(--ColorWhite);
+    margin-left: 3rem;
+    font-weight: 800;
+    letter-spacing: .1rem;
+    font-family: 'Lato', sans-serif;  
+    font-size: .9rem;
+
+}
+.nav-links li a:hover{
+    color: #ff0080;
+    transition: 1s ease-in;
+}
+.nav-links li a.active{
+    color: #ff0080;
+}
+/* =================Menu bar=================== */
+.icon-menu{
+    font-size: 1.2rem;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 9px 1px;
+    cursor: pointer;
+    color: var(--ColorWhite);
+    display: none;
+}
+nav.white{
+    background: var(--ColorWhite);
+    margin-top: 0rem;
+    box-shadow: 0 0 .2rem 0 #00000081;
+
+}
+ul li a.black{
+    color: #000;
+}
+/* ======================mobile madia============================= */
+@media (max-width: 763px){
+    nav{
+        background: var(--ColorWhite);
+        margin-top: 0rem;
+        z-index: 99;
+    }
+    .nav-links li a{
+        color: #000;
+    }
+    .nav-links{
+        position: fixed;
+        min-width: 100%;
+        height: 0vh;
+        background-color: var(--ColorWhite);
+        top: 35px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        transition: 1s all;
+        z-index: 0
+        
+    }
+    .nav-links li{
+        display: block;
+        margin: .9rem 0 1.5rem 0;
+    }
+    .icon-menu{
+        display: block;
+        right: 0;
+        color: #000;
+    }
+    .nav-links li a{
+        margin-left: 0rem;
+    }
+    ul.showing{
+        height: 35%;
+    }
+}
+
+/* ============================================= HOME PAGE CSS ================================================= */
+/* ------------------header---------------------------- */
+.header-home{
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(./img/header_site.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+}
+.header-text{
+    display: grid;
+    align-items: center;
+    align-self: center;
+    margin: auto;
+}
+.header-text h1{
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 50px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 8px rgba(36, 1, 34, 0.534);
+    animation: color-cycle 5s infinite ease-in-out;
+    color: rgba(240, 17, 221, 0.9);
+    border: #000000;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: -14px;
+    text-align: center;
+}
+/* ======================Mobile madia Header============================= */
+@media (max-width:495px) {
+    .header-text h1{
+        font-size: 35px;
+    }
+}
+/* ------------------ Kdrama section ---------------------------- */
+.kdrama-cast{
+    margin: 2rem auto;
+    padding-top: 1.5rem;
+    width: 90%;
+}
+.text-kdrama-cast{
+    padding-bottom: 2rem;
+}
+.text-kdrama-cast h1{
+    font-style: italic;
+    font-size: 2rem;
+}
+.text-kdrama-cast p{
+    opacity: .9;
+    font-style: italic;
+}
+.item-cast{
+    position: relative;
+    margin: .8rem  0 .8rem 0;
+    overflow: hidden;
+    /* box-shadow: 0px 2px 2px 2px #00000088; */
+}
+.item-cast .text-cast{
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    bottom: -90;
+    top: 0;
+    background-color: #ffffff79;
+    padding: 0 .9rem;
+    /* opacity: 0; */
+    /* overflow: hidden; */
+    height: 0%;
+}
+.item-cast:hover .text-cast{
+    opacity: 1;
+    bottom: 0;
+    transition: .9s ease-in-out;
+    height: 100%;
+}
+.item-cast .text-cast .title-drama-cast{
+    text-align: center;
+    padding-top: 1.3rem;
+}
+.item-cast .text-cast .title-drama-cast h1{
+    font-size: 1.3rem;
+    color: var(--ColorBlack);
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    background-color: #ffffff79;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: .5rem .5rem;
+}
+.item-cast:hover .text-cast .title-drama-cast h1{
+    background-color: transparent;
+}
+.item-cast .text-cast .cast-drama{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item-cast .text-cast .cast-drama h6{
+    margin: 0 .9rem .9rem .9rem;
+    text-align: center;
+    padding-bottom: .5rem;
+    font-size: .8rem;
+    color: var(--ColorBlack);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+.item-cast .img-cast img{
+    height: 250px;
+    filter: contrast(90%);
+    border-radius: .2rem .2rem .2rem .2rem;
+    transition: .9s ease-in-out;
+}
+.item-cast:hover .img-cast img{
+    transform: scale(1.1);
+}
+/* ==================== What I DO ========================= */
+.what-i-do-sec{
+    margin: 2rem auto;
+    padding-top: .9rem;
+    width: 80%;
+    padding-bottom: 3rem;
+}
+.what-i-Do{
+    padding-bottom: 1.5rem;
+}
+.what-i-Do h1{
+    font-style: italic;
+    font-size: 2rem;
+}
+.what-i-Do p{
+    opacity: .9;
+    font-style: italic;
+}
+.card-wiitem{
+    width: 90%;
+    box-shadow: 1px 1px 2px 2px #4e4e4e5e;
+    text-align: center;
+    margin: .9rem auto;
+    transition: .5s ease-in-out;
+}
+.card-top .bx{
+    font-size: 3.5rem;
+    margin-top: .9rem;
+    opacity: .9;
+}
+.card-body h3{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-style: italic;
+}
+.card-text{
+    margin: 0 .9rem;
+}
+.card-text p{
+    font-size: .9rem;
+    opacity: .9;
+    font-style: italic;
+}
+.what-i-Do_item:hover .card-wiitem{
+    background-color: #000000d3;
+    color: var(--ColorWhite);
+}
+@media (max-width: 927px) {
+    .what-i-do-sec{
+        width: 100%;
+    }
+    .card-top .bx{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 431px) {
+    .what-i-do-sec{
+        width: 90%;
+    }
+}
+/* ================== Cherry Blossoms ================== */
+.cherry_blossoms_sec{
+    padding: 6rem 0;
+}
+.cherry_blossoms_text{
+    width: 90%;
+    padding-bottom: 1.5rem;
+}
+.cherry_blossoms_text h1{
+    font-size: 2.5rem;
+    margin: 1.5rem 1rem;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.cherry_blossoms_text h1 span{
+    color: var(--ColorSecondary);
+}
+.cherry_blossoms_text p{
+    font-style: italic;
+    opacity: .9;
+}
+.cherry_blossoms_text p span{
+    color: var(--ColorPrimary);
+}
+.btn-cherry-blossoms a{
+    background: var(--ColorSecondary);
+    padding: .5rem 1.5rem;
+    border-radius: 5px;
+    color: #000000;
+    transition: .9s ease-in-out;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+}
+.btn-cherry-blossoms a:hover{
+    background-color: #9700fca9;
+}
+.img_cherry_blossoms img{
+    max-width: 500px;
+    min-height: 550px;
+    box-shadow: 1px 1px 1px 1px #0000006b;
+    border-radius: 5px;
+    filter: contrast(100%);
+}
+@media (max-width: 767px) {
+    .cherry_blossoms_text p{
+        text-align: center;
+    }
+    .btn-cherry-blossoms a{
+        display: none;
+    }
+}
+
+/* ===================About Korean========================== */
+.about-korean-Kdrama{
+    margin: 1.2rem 0;
+    padding: 1.5rem 0;
+}
+.item-about-kdrama{
+    width: 100%;
+    height: 30vh;
+    background: radial-gradient(rgba(0,0,0,.9),rgba(0,0,0,.5)),url("./img/Gwangan-Bridge.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.item-about-kdrama h1{
+    margin: auto;
+    text-align: center;
+    padding-top: 5.5rem;
+    color: var(--ColorWhite);
+    font-size: 1.8rem;
+    font-style: italic;
+}
+@media (max-width: 460px) {
+    .item-about-kdrama h1{
+        font-size: 1.3rem;
+    }
+}
+/* ======================== Blog ====================== */
+.blog-section{
+    margin-top: 1.5rem;
+    margin-bottom: 8rem;
+    padding: 1.5rem 0;
+}
+.blog-section .Kdrama-allways-show{
+    margin-top: .9rem;
+}
+.blog-section .Kdrama-allways-show h1{
+    font-style: italic;
+    font-size: 2rem;
+}
+.blog-section .Kdrama-allways-show h4{
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--ColorPrimary);
+    font-style: italic;
+}
+.blog-section .Kdrama-allways-show h4 span:nth-last-child(2){
+    color: var(--ColorBlack);
+}
+.blog-section .Kdrama-allways-show h4 span:nth-last-child(1){
+    color: var(--ColorSecondary);
+}
+.left-blog-item, 
+.right-blog-item .top-left,
+.right-blog-item .top-right,
+.right-blog-item .bottom-left,
+.right-blog-item .bottom-right{
+    position: relative;
+    overflow: hidden;
+}
+.text-left-blog{
+    position: absolute;
+    left: 0;
+    bottom: -150px;
+    right: 0;
+    background-color: #00000075;
+    transition: .9s ease-in-out;
+    height: 23%;
+    padding: .5rem 1.9rem 0 1.9rem;
+}
+.text-left-blog h1{
+    font-size: 2.5rem;
+    color: var(--ColorWhite);
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: 'Edu SA Beginner', cursive;
+}
+.text-left-blog h5{
+    font-size: 1rem;
+    font-family: 'Edu SA Beginner', cursive;
+    color: var(--ColorWhite);
+}
+.right-top-left,
+.right-top-right,
+.right-bottom-left,
+.right-bottom-right{
+    position: absolute;
+    left: 0;
+    bottom: -115px;
+    right: 0;
+    height: 35%;
+    background-color: #00000075;
+    transition: .9s ease-in-out;
+}
+.dd-flex{
+    display: flex;
+}
+.right-top-left,
+.right-top-right,
+.right-bottom-left,
+.right-bottom-right{
+    padding: .5rem 1rem 0 1rem;
+}
+.right-top-left h1,
+.right-top-right h1,
+.right-bottom-left h1,
+.right-bottom-right h1{
+    font-size: 1.3rem;
+    color: var(--ColorWhite);
+    font-family: 'Edu SA Beginner', cursive;
+    text-transform: uppercase;
+}
+.right-top-left h5,
+.right-top-right h5,
+.right-bottom-left h5,
+.right-bottom-right h5{
+    font-size: .8rem;
+    color: var(--ColorWhite);
+    font-family: 'Edu SA Beginner', cursive;
+}
+.left-blog-item:hover .text-left-blog{
+    bottom: 0px;
+}
+.right-blog-item .top-left:hover .right-top-left,
+.right-blog-item .top-right:hover .right-top-right,
+.right-blog-item .bottom-left:hover .right-bottom-left,
+.right-blog-item .bottom-right:hover .right-bottom-right{
+    bottom: 0px;
+}
+@media (max-width: 670px) {
+    .text-left-blog{
+        padding: .5rem 1rem 0 1rem;
+    }
+    .dd-flex{
+        display: block;
+    }
+    .text-left-blog h1,
+    .right-top-left h1,
+    .right-top-right h1,
+    .right-bottom-left h1,
+    .right-bottom-right h1{
+        font-size: 1.8rem;
+    }
+    .text-left-blog h5,
+    .right-top-left h5,
+    .right-top-right h5,
+    .right-bottom-left h5,
+    .right-bottom-right h5{
+        font-size: .9rem;
+    }
+    .text-left-blog,
+    .right-top-left,
+    .right-top-right,
+    .right-bottom-left,
+    .right-bottom-right{
+        bottom: -120px;
+        height: 23%;
+    }
+}
+@media (max-width: 552px) {
+    .text-left-blog h1,
+    .right-top-left h1,
+    .right-top-right h1,
+    .right-bottom-left h1,
+    .right-bottom-right h1{
+        font-size: 1.3rem;
+    }
+    .text-left-blog h5,
+    .right-top-left h5,
+    .right-top-right h5,
+    .right-bottom-left h5,
+    .right-bottom-right h5{
+        font-size: .7rem;
+    }
+}
+@media (max-width: 450px){
+    .text-left-blog,
+    .right-top-left,
+    .right-top-right,
+    .right-bottom-left,
+    .right-bottom-right{
+        left: 0;
+        bottom: -120px;
+        height: 30%;
+    }
+    .blog-section .Kdrama-allways-show h1{
+        font-style: italic;
+        font-size: 1.3rem;
+    }
+    .blog-section .Kdrama-allways-show h4{
+        font-size: 1rem;
+    }
+}
+/* ============================================= END HOME PAGE CSS ================================================= */
+
+
+
+/* ============================================= BLOG PAGE CSS ================================================= */
+/* ----------------- Header ------------------- */
+.header-blog{
+    width: 100%;
+    height: 40vh;
+    background: radial-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(./img/header_site.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+}
+.header-text-Blog-page{
+    display: grid;
+    align-items: center;
+    align-self: center;
+    margin: auto;
+}
+.header-text-Blog-page h1{
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.534);
+    animation: color-cycle 5s infinite ease-in-out;
+    color: rgba(240, 17, 221, 0.9);
+    border: #000000;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: 0px;
+    text-align: center;
+}
+/* ----------------- Header ------------------- */
+
+/* ----------------- Blog About Page-------------- */
+.blog-about-page{
+    padding: 2rem 0;
+}
+.container-about-page{
+    width: 70%;
+    margin: 2rem auto;
+}
+.blog-about-page-title{
+    margin-top: .9rem;
+    text-align: center;
+}
+.blog-about-page-title h1{
+    font-style: italic;
+    font-size: 2rem;
+}
+.blog-about-page-title p{
+    font-style: italic;
+    opacity: .9;
+}
+.blog-layout-page{
+    margin-top: 1.2rem;
+}
+.blog-layout-row{
+    display: flex;
+    margin: auto;
+    gap: 20px;
+    align-items: center;
+}
+.blog-layout-page-one,
+.blog-layout-page-two,
+.blog-layout-page-tree{
+    margin: 1.5rem 0;
+}
+.blog-layout-page-one .blog-layout-row .blog-layout-page-row-1,
+.blog-layout-page-two .blog-layout-row .blog-layout-page-row-1,
+.blog-layout-page-tree .blog-layout-row .blog-layout-page-row-1{
+    max-height: 250px;
+    flex: 0 0 38.33333333%;
+}
+.blog-layout-page-one .blog-layout-row .blog-layout-page-row-2,
+.blog-layout-page-two .blog-layout-row .blog-layout-page-row-2,
+.blog-layout-page-tree .blog-layout-row .blog-layout-page-row-2{
+    flex: 0 0 23.33333333%;
+}
+.blog-layout-page-one .blog-layout-row .blog-layout-page-row-2 img,
+.blog-layout-page-two .blog-layout-row .blog-layout-page-row-2 img,
+.blog-layout-page-tree .blog-layout-row .blog-layout-page-row-2 img{
+    max-height: 250px;
+}
+.blog-layout-page-one .blog-layout-row .blog-layout-page-row-3,
+.blog-layout-page-two .blog-layout-row .blog-layout-page-row-3,
+.blog-layout-page-tree .blog-layout-row .blog-layout-page-row-3{
+    flex: 0 0 38.33333333%;
+    max-height: 250px;
+}
+.blog-layout-page-one .blog-layout-row .blog-layout-page-row-3 h3,
+.blog-layout-page-two .blog-layout-row .blog-layout-page-row-1 h3,
+.blog-layout-page-tree .blog-layout-row .blog-layout-page-row-3 h3{
+    font-family: 'Edu SA Beginner', cursive;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+.blog-layout-page-two .blog-layout-row .blog-layout-page-row-1{
+    text-align: right;
+}
+.blog-layout-page-one .blog-layout-row .blog-layout-page-row-3 p,
+.blog-layout-page-two .blog-layout-row .blog-layout-page-row-1 p,
+.blog-layout-page-tree .blog-layout-row .blog-layout-page-row-3 p{
+    font-size: .9rem;
+    font-style: italic;
+}
+
+
+
+@media (max-width: 1004px) {
+    .container-about-page{
+        width: 90%;
+    }
+}
+@media (max-width: 770px) {
+    .hide-row-1,
+    .hide-row-2,
+    .hide-row-3{
+        display: none;
+    }
+    .blog-layout-page-one .blog-layout-row .blog-layout-page-row-2, 
+    .blog-layout-page-one .blog-layout-row .blog-layout-page-row-3,
+    .blog-layout-page-two .blog-layout-row .blog-layout-page-row-1,
+    .blog-layout-page-two .blog-layout-row .blog-layout-page-row-2,
+    .blog-layout-page-tree .blog-layout-row .blog-layout-page-row-2, 
+    .blog-layout-page-tree .blog-layout-row .blog-layout-page-row-3{
+        flex: 0 0 50%;
+    }
+}
+@media (max-width: 474px) {
+    .blog-layout-row{
+        display: block;
+    }
+    .blog-layout-page-two{
+        display: none;
+    }
+}
+/* ----------------- Blog About Page-------------- */
+.South-Korea{
+    padding: 4rem 0;
+}
+.container-south-korea-place{
+    width: 80%;
+}
+.title-south-korea-place{
+    margin-top: .9rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.title-south-korea-place h1{
+    font-style: italic;
+    font-size: 2rem;
+}
+.title-south-korea-place p{
+    font-style: italic;
+    opacity: .9;
+}
+.items-south-korea-place{
+    margin: 1.5rem 0;
+}
+.text-south-korea-place{
+    text-align: center;
+    padding: .9rem 1rem 1rem 1rem;
+}
+.text-south-korea-place h3{
+    font-family: 'Edu SA Beginner', cursive;
+}
+.text-south-korea-place p{
+    font-size: .9rem;
+    font-style: italic;
+    margin-top: 1.3rem;
+}
+.img-south-korea-place{
+    margin-top: .7rem;
+    margin-bottom: .7rem;
+}
+.img-south-korea-place img{
+    height: 250px;
+    min-width: 230px;
+
+}
+.korea-place-one{
+    background-color: #ff168a5b;
+    height: 250px;
+
+}
+.korea-place-two{
+    background-color: #9700fc5b;
+    height: 250px;
+}
+.korea-place-tree{
+    border: 1px solid #0000005b;
+    height: 250px;
+}
+
+@media (max-width: 767px) {
+    .container-south-korea-place{
+        width: 80%;
+    }
+    .korea-place-one,
+    .korea-place-two,
+    .korea-place-tree{
+        height: 180px;
+        margin: .5rem 0;
+    }
+
+}
+@media (max-width: 561px) {
+    .text-south-korea-place p{
+        font-size: .8rem;
+    }
+    .container-south-korea-place{
+        width: 95%;
+    }
+}
+/* ============================================= END BLOG PAGE CSS ================================================= */
+
+
+
+/* ============================================= Gallery PAGE CSS ================================================= */
+/* ----------------- Header ------------------- */
+.header-gallery{
+    width: 100%;
+    height: 40vh;
+    background: radial-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(./img/header_site.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+}
+.header-text-Gallery-page{
+    display: grid;
+    align-items: center;
+    align-self: center;
+    margin: auto;
+}
+.header-text-Gallery-page h1{
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.534);
+    animation: color-cycle 5s infinite ease-in-out;
+    color: rgba(240, 17, 221, 0.9);
+    border: #000000;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: 0px;
+    text-align: center;
+}
+/* ----------------- Gallery Page Artist ------------------- */
+.gallery-page-artist{
+    margin: 3rem auto;
+}
+
+.gallery-page-about-title{
+    margin-top: .9rem;
+    text-align: center;
+}
+.gallery-page-about-title h1{
+    font-style: italic;
+    font-size: 2rem;
+    margin-top: 5rem;
+}
+.gallery-page-about-title p{
+    font-style: italic;
+    opacity: .9;
+    margin-bottom: 3rem;
+}
+.item-carousel{
+    opacity: 0.5;
+    filter: brightness(30%);
+    transition: .9s ease-in-out;
+    transform:scale(.9);
+    position: relative;
+    overflow: hidden;
+}
+.item-carousel img{
+    /* overflow: hidden; */
+    border: 1px solid #0000003f;
+    filter: contrast(120%);
+    box-shadow: 0px 0px 2px 2px #000000;
+}
+.active .item-carousel{
+    filter: brightness(100%);
+    opacity: 1;
+    transform:scale(1);
+    margin: auto;
+}
+.Kdrama-series-agent{
+    position: absolute;
+    right: -20%;
+    bottom: 0;
+    top: 0;
+    background-color: #000000a6;
+    height: 85%;
+    width: 20%;
+    text-align: right;
+    padding-right: .5rem;
+    padding-top: 1rem;
+    transition: .9s ease-in-out;
+}
+.Kdrama-series-agent h6{
+    font-style: italic;
+    font-size: .9rem;
+    text-align: center;
+    color: var(--ColorWhite);
+}
+.Kdrama-series-agent h6 span{
+    text-transform: uppercase;
+    font-size: .7rem;
+}
+.Kdrama-series-agent h5{
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: var(--ColorWhite);
+}
+.Kdrama-series-agent li{
+    line-height: 1.8rem;
+    font-size: .7rem;
+    color: var(--ColorWhite);
+}
+.inner-text-name{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15%;
+    background-color: #000000a6;
+    height: 15%;
+    text-align: center;
+    padding-top: 1rem;
+    transition: .9s ease-in-out;
+}
+.inner-text-name a{
+    font-size: 2.3rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--ColorWhite);
+    font-style: italic;
+}
+
+.active .item-carousel:hover .inner-text-name{
+    bottom: 0;
+}
+.active .item-carousel:hover .Kdrama-series-agent{
+    right: 0;
+}
+
+@media (max-width: 933px) {
+    .inner-text-name{
+        padding-top: 0;
+    }
+}
+@media (max-width: 703px) {
+    .inner-text-name a{
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 527px) {
+    .inner-text-name a{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 1175px) {
+    .Kdrama-series-agent{
+        width: 30%;
+        right: -30%;
+    }
+    .Kdrama-series-agent h5{
+        margin-top: .7rem;
+    }
+    .Kdrama-series-agent li{
+        line-height: 1.3rem;
+    }
+}
+@media (max-width: 797px) {
+    .Kdrama-series-agent{
+        width: 40%;
+        right: -40%;
+    }
+    .Kdrama-series-agent li{
+        font-size: .6rem;
+        line-height: .8rem;
+    }
+
+}
+@media (max-width: 535px) {
+    .Kdrama-series-agent{
+        display: none;
+    }
+}
+
+/* ===================About Korean========================== */
+.gallery-page-about{
+    margin: 1.2rem 0;
+    padding: 1.5rem 0;
+}
+.gallery-page-item{
+    width: 100%;
+    height: 30vh;
+    background: radial-gradient(rgba(0,0,0,.9),rgba(0,0,0,.5)),url("./img/blog/Han_River.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.gallery-page-item h1{
+    margin: auto;
+    text-align: center;
+    padding-top: 5.5rem;
+    color: var(--ColorWhite);
+    font-size: 1.8rem;
+    font-style: italic;
+}
+/* =================== Gallery Page Writter section ========================== */
+.Writter-Kdrama-Series{
+    margin: 8rem auto;
+}
+.pink-container{
+    background-color: #ff168aad;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+.white-container{
+    width: 80%;
+    background-color: var(--ColorWhite);
+    margin: auto;
+}
+.Writter-title{
+    margin-top: .9rem 0 1rem 0;
+    text-align: center;
+}
+.Writter-title h1{
+    font-style: italic;
+    font-size: 2rem;
+}
+.Writter-title p{
+    font-style: italic;
+    opacity: .9;
+}
+.items-Writter{
+    padding: 1rem 3rem;
+    margin: auto;
+}
+.Writter-item{
+    margin: auto 1.5rem;
+    min-width: 150px;
+    min-height: 180px;
+    padding-bottom: 1.9rem;
+}
+.icon-writter{
+    margin: 1rem auto .5rem auto;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--ColorSecondary);
+    border-radius: 100%;
+}
+.icon-writter img{
+    margin: auto;
+    border-radius: 100%;
+}
+.text-writter{
+    margin: auto;
+    text-align: center;
+}
+.text-writter h3{
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+}
+.text-writter h6{
+    font-size: .7rem;
+    font-style: italic;
+}
+/* ============================================= END Gallery PAGE CSS ================================================= */
+
+
+
+/* ============================================= ABOUT PAGE CSS ================================================= */
+/* ----------------- Header ------------------- */
+.header-About{
+    width: 100%;
+    height: 40vh;
+    background: radial-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(./img/header_site.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+}
+.header-text-About-page{
+    display: grid;
+    align-items: center;
+    align-self: center;
+    margin: auto;
+}
+.header-text-About-page h1{
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.534);
+    animation: color-cycle 5s infinite ease-in-out;
+    color: rgba(240, 17, 221, 0.9);
+    border: #000000;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: 0px;
+    text-align: center;
+}
+/* ------------------------------ About Section -------------------------------- */
+.about-section{
+    margin: 1.5rem auto;
+}
+.container-main-about{
+    background: url('./img/Kdrama_alltime.jpg') no-repeat left;
+    background-size: 55%;
+    height: 100vh;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 200px 0;
+}
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 2rem 3rem;
+    margin-top: 2rem;
+}
+.inner-container h1{
+    font-style: italic;
+    font-family: 'Raleway', sans-serif;
+}
+.inner-container p{
+    opacity: .9;
+    font-style: italic;
+    width: 80%;
+    line-height: 1.5rem;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+}
+@media (max-width: 1154px) {
+    .container-main-about{
+        padding: 8rem 0;
+    }
+    .inner-container p{
+        width: 100%;
+    }
+}
+@media (max-width: 924px) {
+    .container-main-about{
+        background-size: 100%;
+    }
+    .inner-container{
+        float: none;
+        width: 70%;
+        float: center;
+        justify-content: center;
+        background-color: var(--ColorWhite);
+        padding: auto;
+        margin: auto;
+    }
+}
+@media (max-width: 758px) {
+    .inner-container p{
+        font-size: .5rem;
+        line-height: 1rem;
+    }
+    .inner-container{
+        padding-top: 1rem;
+        margin-top: 7rem;
+    }
+    .inner-container h1{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 520px) {
+    .inner-container{
+        margin-top: 4rem;
+    }
+}
+
+/* =-========================== Mytop Four Kdrama=============================== */
+.my-top-four-kdrama-series{
+    margin: 1.5rem auto;
+}
+
+.text-title-four-kdrama{
+    margin-top: .9rem 0 1rem 0;
+    text-align: center;
+}
+.text-title-four-kdrama h1{
+    font-style: italic;
+    font-size: 2rem;
+}
+.text-title-four-kdrama p{
+    font-style: italic;
+    opacity: .9;
+}
+.mytop-four-kdrama{
+    margin-top: 4rem;
+}
+.mytop-four-item-card{
+    width: 80%;
+    margin:  1rem auto;
+    /* border: 1px solid #00000081; */
+    box-shadow: 0 0 2px 2px #00000065;
+}
+.top-item h1{
+   font-size: 1rem;
+   text-align: center;
+}
+.top-item{
+    width: 95%;
+    margin: auto;
+    min-height: 300px;
+    padding: .4rem 0;
+}
+.top-item img{
+    height: 300px;
+}
+.middle{
+    margin: auto 1rem;
+}
+.middle h6{
+    text-align: center;
+    font-size: .7rem;
+    margin-top: 0;
+    padding-top: 0;
+}
+.bottom{
+    background: #0000008a;
+    text-align: center;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    transition: .9s ease-in-out;
+}
+.bottom a{
+    text-align: center;
+    margin: auto;
+    color: var(--ColorWhite);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.bottom:hover{
+    background: #000000bb;
+}
+/* ============================================= END ABOUT PAGE CSS ================================================= */
+
+
+
+
+/* ==================== Footer ========================= */
+.foot_sec{
+    background-color: #c7c6c6;
+    width: 100%;
+}
+
+.foot_top{
+    margin-bottom: 2rem;
+}
+.foot_left .logo{
+    font-size: 35px;
+    margin-top: 1rem;
+}
+.foot_left p{
+    width: 70%;
+    font-size: .9rem;
+    font-style: italic;
+}
+.foot_rt{
+    margin-top: 1.8rem;
+}
+.foot_rt .icon-footer{
+    margin-bottom: .5rem
+}
+.foot_rt .icon-footer .bx{
+    font-size: 1.3rem;
+    background: var(--ColorBlack);
+    color: var(--ColorWhite);
+    padding: .3rem .3rem;
+    border-radius: 10px;
+    margin: 0 .3rem;
+    transition: .9s ease-in-out;
+}
+.foot_rt .icon-footer .bx:hover{
+    cursor: pointer;
+    background: var(--ColorPrimary);
+}
+.foot_rt h3{
+    font-style: italic;
+}
+.foot_btm{
+    background-color: #000000;
+    text-align: center;
+    padding-bottom: 0;
+    padding-top: .2rem;
+}
+.foot_btm p{
+    color: var(--ColorWhite);
+}
